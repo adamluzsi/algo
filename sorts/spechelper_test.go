@@ -8,12 +8,12 @@ import (
 )
 
 type TestCase struct {
-	Expected []int
-	Actually []int
+	Expected Ints
+	Actually Ints
 }
 
 func SharedSpec(t *testing.T, subject func(sort.Interface)) {
-	t.Run("given the current sorting algo", func(t *testing.T) {
+	t.Run("given the current sorting algorithm", func(t *testing.T) {
 		t.Run("when collection is single element", func(t *testing.T) {
 			t.Parallel()
 
