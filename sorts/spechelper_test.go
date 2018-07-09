@@ -1,7 +1,6 @@
 package sorts_test
 
 import (
-	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -12,15 +11,13 @@ type TestCase struct {
 	Actually Ints
 }
 
-func SharedSpec(t *testing.T, subject func(sort.Interface)) {
+func SharedSpec(t *testing.T, subject func(Ints)) {
 	t.Run("given the current sorting algorithm", func(t *testing.T) {
 		t.Run("when collection is single element", func(t *testing.T) {
 			t.Parallel()
 
 			slice := Ints{1}
-
 			subject(slice)
-
 			require.Equal(t, Ints{1}, slice)
 		})
 

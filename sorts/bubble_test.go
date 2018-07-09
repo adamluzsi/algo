@@ -7,5 +7,5 @@ import (
 )
 
 func TestBubble(t *testing.T) {
-	SharedSpec(t, sorts.Bubble)
+	SharedSpec(t, func(is Ints) { sorts.Bubble(is) })
 }
