@@ -11,8 +11,8 @@ func Merge(s []int) {
 
 	Merge(left)
 	Merge(right)
-
 	sortRelativeSortedSlices(left, right)
+
 }
 
 func sortRelativeSortedSlices(left, right []int) {
